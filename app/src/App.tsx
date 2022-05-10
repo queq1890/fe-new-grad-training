@@ -1,6 +1,9 @@
 import { ChangeEvent, useState } from 'react';
-import MessageArea from './components/MessageArea';
+import TextInputArea from './components/TextInputArea';
+
 import MessageList from './components/MessageList';
+import { Box, Stack, Typography } from '@mui/material';
+import Profile from './components/Profile';
 
 function App() {
   const [message, setMessage] = useState('');
@@ -16,14 +19,21 @@ function App() {
   };
 
   return (
-    <div>
-      <MessageList messageList={messageList} />
-      <MessageArea
-        message={message}
-        onMessageChange={onMessageChange}
-        onMessageSubmit={onMessageSubmit}
-      />
-    </div>
+    <Stack spacing={4}>
+      <Box>
+        <Typography variant="h4">チャット</Typography>
+        <MessageList messageList={messageList} />
+        <TextInputArea
+          value={message}
+          onChange={onMessageChange}
+          onSubmit={onMessageSubmit}
+        />
+      </Box>
+      <Box>
+        <Typography variant="h4">プロフィール</Typography>
+        <Profile />
+      </Box>
+    </Stack>
   );
 }
 
