@@ -2,34 +2,55 @@
 
 ## このリポジトリについて
 
-- React.js + TypeScript に初めて触れる方向けのチュートリアルリポジトリです。
+React.js + TypeScript に初めて触れる方向けのチュートリアルリポジトリです。
 
-## 構成
+### チュートリアルの想定受講対象
 
-以下のチャプターで構成されています。
+- 他のプログラミング言語を触ったことがあるが、Web フロントエンドに関係する技術を触ったことがない
 
-- 1. 現代 Web フロントエンドの特徴
-  - 現代 Web フロントエンド(2022/05 時点)での Web フロントエンドについて、どのような技術が、どのような背景で採用されているかを解説します。
-- 2. 環境構築
-  - Node.js 環境の構築
-  - React.js + TypeScript 環境の scafolding
-  - eslint / prettier の導入
-- 3. マークアップをしてみよう
-  - UI ライブラリの導入
-  - React component の作成
-  - TypeScript を使った function の定義
-- 4. ロジックの実装
-  - React.useState
-  - props を使った子 component への値の伝播
-- 5. API からの data fetch
-  - React.useEffect
-  - window.fetch
-  - fetch した data を state に反映する
-- 6. 作成した React アプリケーションを deploy してみよう
-  - vercel への deploy
-- (Apprndix)
-  - 本チュートリアル終了後の学習について
-  - 参考になる学習リソース
+### チュートリアルのゴール
+
+- JavaScript / TypeScript / React.js について、ライブラリのチュートリアル・Udemy の講座などを通して、自習を行えるレベル
+
+## リポジトリの構成
+
+- [app](./app): このチュートリアルで作成する React.js アプリケーションの実装サンプル
+- [lessons](./app)): チュートリアルのマークダウンファイルが格納されているディレクトリ
+- [appendix](./appendix): チュートリアル完了者向けの補足が格納されているディレクトリ
+
+## チュートリアルの構成
+
+5 つのチャプターで構成されています。
+
+### [01. 現代 Web フロントエンドの特徴](./lessons/01-background/lesson.md)
+
+- 最近の Web フロントエンド(2022/05 時点)での Web フロントエンドについて、どのような技術が、どのような背景で採用されているかの解説
+
+### [02. 環境構築](./lessons/02-getting-started/lesson.md)
+
+- Node.js 環境の構築
+- React.js + TypeScript 環境の構築
+
+### [03. マークアップをしてみよう](./lessons/03-markup/lesson.md)
+
+- JavaScript / TypeScript での変数・関数宣言
+- 不要なコード・ファイルの削除
+- UI ライブラリの導入
+- React component の作成
+- TypeScript を使った function の定義
+
+### [04. React component に状態を持たせてみよう](./lessons/04-state/lesson.md)
+
+- `useState` hook を使った状態管理
+- React の SyntheticEvent
+- ユーザーがメッセージを入力できる component の作成
+- 入力された内容を messageList に追加するロジックの実装
+
+### [05. API から data を fetch してみよう](./lessons/05-fetch-data/lesson.md)
+
+- MessageArea component のリファクタリング
+- Profile component の作成
+- GitHub Users API から data を fetch する
 
 ## 進め方
 
@@ -40,5 +61,6 @@
 
 ## コントリビューション
 
-- PR は大歓迎です 🍺
+- PR / Issue は大歓迎です 🍺
 - 誤字・コードの修正など、訂正したい点が見つかった場合は、PR を open して[@queq1890](https://github.com/queq1890) を reviewer に設定してください。
+- 議論が必要なトピックについては、Issue を作成してください。

@@ -1,4 +1,4 @@
-# 2.環境構築
+# 02.環境構築
 
 本チャプターでは、以下の作業を行っていきます。
 
@@ -27,6 +27,8 @@ $ brew install node
 ### 2. Node.js のバージョン管理ツール経由で Node.js をインストールする
 
 アプリケーションによっては、 `.node-version` のような Node.js のバージョンを指定する設定ファイルを配置して、アプリケーションを実行できる Node.js のバージョンを固定していることがあります。複数のバージョンの Node.js を実行する可能性をふまえ、Node.js のバージョンを簡単に切り替えられる、バージョン管理ツール経由で Node.js をインストールすることも選択肢の 1 つとして考えられます。
+
+(筆者は [nodenv](https://github.com/nodenv/nodenv) というツールを利用して Node.js のバージョンを切り替えられるようにしていますが、ここ 2 年ほど GitHub 上でのメンテナンスが止まっていそうなので、他のツールへの乗り換えを考えています。)
 
 ### Node.js がインストールできたかどうかの確認
 
@@ -134,8 +136,12 @@ npm run start
 
 ## チャレンジ
 
-1. `create-react-app` によって生成されたディレクトリには、`package.json` の他に、`package-lock.json` という json ファイルも生成されています。この json ファイルには、どのような役割があるか、調べてみましょう。
+- 1. `create-react-app` によって生成されたディレクトリには、`package.json` の他に、`package-lock.json` という json ファイルも生成されています。この json ファイルには、どのような役割があるか、調べてみましょう。
 
 ## 参考資料
 
--
+- [Node.js 公式ドキュメント](https://nodejs.org/en/docs/)
+- [nodenv](https://github.com/nodenv/nodenv)
+- [create-react-app](https://github.com/facebook/create-react-app)
+- [package.json | npm Docs](https://docs.npmjs.com/cli/v8/configuring-npm/package-json)
+- [package-lock.json | npm Docs](https://docs.npmjs.com/cli/v8/configuring-npm/package-lock-json)

@@ -1,4 +1,4 @@
-# 5.API から data を fetch してみよう
+# 05. API から data を fetch してみよう
 
 本チャプターでは、以下の作業を行っていきます。
 
@@ -13,7 +13,7 @@
 
 - [非同期処理:コールバック/Promise/Async Function · JavaScript Primer #jsprimer](https://jsprimer.net/basic/async/#async-handling)
 
-## MessageArea component のリファクタ
+## MessageArea component のリファクタリング
 
 以下のような振る舞いを考えてみます。
 
