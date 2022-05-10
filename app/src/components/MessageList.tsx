@@ -8,7 +8,7 @@ type Props = {
 
 const MessageList: FC<Props> = (props) => {
   return (
-    <Stack>
+    <Stack spacing={1}>
       {props.messageList.map((message) => {
         return <Box>{message}</Box>;
       })}
