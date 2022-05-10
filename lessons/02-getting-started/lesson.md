@@ -124,10 +124,12 @@ $ cat package.json
 `scripts` セクションに、このアプリケーションのディレクトリ配下で実行可能な script が記載されています。開発環境向けに、React.js の dev server を起動する script は `start` です。CLI から実行してみましょう。
 
 ```bash
-npm run start
+$ npm run start
 ```
 
-![./images/hello-world.png]
+以下の画像の様な画面が、http://localhost:3000 で立ち上がれば成功です。
+
+![ハローワールド](./images/hello-world.png)
 
 ## まとめ
 

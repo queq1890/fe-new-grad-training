@@ -375,7 +375,7 @@ export default App;
 
 定義した配列の中の文字列が、1 つずつ表示されていれば、`messageList` を props 経由で受け取れるようにする改修は完了です。
 
-![./images/props.png]
+![props](./images/props.png)
 
 ## まとめ
 
