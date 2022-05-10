@@ -7,7 +7,7 @@
 - UI ライブラリの導入
 - React component の作成
 
-本チャプター完了時点で、以下のスクリーンショットのような、メッセージの一覧と input が表示されているような、チャット UI が実装されることを目標に作業していきます。
+本チャプター完了時点で、以下のスクリーンショットのような、チャット UI のメッセージの一覧部分が実装されることを目標に作業していきます。
 
 ## JavaScript / TypeScript での変数・関数宣言
 
@@ -147,9 +147,15 @@ TypeScript でこれらの構文を利用する場合は、`TSX` と呼ばれ、
 - 英語: https://reactjs.org/docs/introducing-jsx.html
 - 日本語: https://ja.reactjs.org/docs/introducing-jsx.html
 
-##　不要なコード・ファイルの削除
+## 不要なコード・ファイルの削除
 
 それでは、いよいよ React.js アプリケーションの実装に移りましょう。前回、create-react-app を用いて、作成したアプリケーションのディレクトリを任意のエディタで開いてください。
+そして、CLI 上で `npm run start` を実行し、dev server が http://localhost:3000 で起動している状態にしてください。
+
+```bash
+npm run start
+```
+
 前チャプターで作成したディレクトリには、本チュートリアルでは使用しないファイル・コードも生成されています。まずはこれらを削除して、これから行う実装の準備をします。
 以下のファイルを削除してください。
 
@@ -220,6 +226,8 @@ MUI で利用できる色を追加したり、フォントを変更したりと�
 
 ## React component の作成
 
+### MessageList component をハードコードする
+
 それでは、インストールした MUI を利用しつつ、React Component を作成してみましょう。
 `src` 配下に、`components` というディレクトリを作り、`components` 配下に `MessageList.tsx` というファイルを作成してください。
 その後、`src/components/MessageList` を開き、次のように記述してください。
@@ -289,11 +297,93 @@ function App() {
 export default App;
 ```
 
-- Message component の定義
-- message: string[] を定義して MesssageList component に渡す
+### props 経由で message の配列を MessageList component に渡す
+
+ここまでで、MessageList component を App component 配下で描画することができるようになりました。しかし、MessageList は「こんにちは」「どんもー」といった string をハードコードして表示してしまっています。チャットで表示するメッセージは、このように固定のものではなく、可変でしょうから、外部から MessageList component にメッセージの配列を渡せるようにして、表示するメッセージを注入できるようにしたいです。定義された MessageList component は、arrow function を使って定義された関数なので、通常の関数同様、引数を渡すことができます。React component における引数は `props` と呼ばれ、props 経由で対象の component を描画している親 component から、任意の値を渡すことができます。
+
+```tsx
+// props から値を受け取る
+const MyName = (props) => <div>私の名前は{props.myName}です</div>;
+
+// props から値を注入する
+const Parent = () => <MyName myName="吉田" />;
+```
+
+それでは、MessageList component に props を追加していきましょう。MessageList componnet の定義を次のように書き換えてください。
+
+```tsx
+import { FC } from 'react';
+import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
+
+type Props = {
+  messageList: string[];
+};
+
+const MessageList: FC<Props> = (props) => {
+  return (
+    <Stack>
+      {props.messageList.map((message) => {
+        return <Box>{message}</Box>;
+      })}
+    </Stack>
+  );
+};
+
+export default MessageList;
+```
+
+string の配列を `messageList` という key で保持している `Props` という型を定義し、これを `FC` 型に　`FC<Props>` のような形で渡しています。TypeScript の型は型を引数としてとることができ、この場合の型引数のことを `generics` と呼びます。ここでは詳細は割愛しますが、`FC<Props>`　は `Props` という型の props を受け取る React Function Component の型を表現していると捉えてください。
+
+```tsx
+type Props = {
+  messageList: string[];
+};
+
+const MessageList: FC<Props> = (props) => {
+
+```
+
+props として受け取った `messageList` は配列なので、これを 1 つずつ Box component で囲って表示できれば、props から受け取ったメッセージたちを全て表示することができそうです。
+このような場合には、JavaScript の `array.prototype.map()` を利用することができます。`array.prototype.map()` は、呼び出し元の配列を元に、新しい配列を生成するメソッドで、これを用いて `messageList` の要素が `Box` component に wrap された新しい配列を生成して、これを描画しています。
+
+```tsx
+// messageList の要素が `Box` でwrap された新しい配列を生成し、表示する
+<Stack>
+  {props.messageList.map((message) => {
+    return <Box>{message}</Box>;
+  })}
+</Stack>
+```
+
+ここまでで MessageList component が props を受け取るように実装を変更することができました。 `App.tsx` に戻って、 `messageList` props に適当な string の配列を渡してみましょう。
+
+```tsx
+import MessageList from './components/MessageList';
+
+// TODO: ユーザーの入力によってmessageList が可変になるようになる
+const messageList = ['こんにちは', 'テスト', 'ですです'];
+
+function App() {
+  return (
+    <div>
+      <MessageList messageList={messageList} />
+    </div>
+  );
+}
+
+export default App;
+```
+
+定義した配列の中の文字列が、1 つずつ表示されていれば、`messageList` を props 経由で受け取れるようにする改修は完了です。
+
+![./images/props.png]
 
 ## まとめ
 
-## チャレンジ
+今回のチャプターでは、JavaScript / TypeScript における変数・関数の定義の方法に触れつつ、props を受け取ることのできる React component の作成を、MUI で UI を組み立てつつ行いました。
+次のチャプターでは、実際にユーザーがキーボードで入力したテキストをメッセージとして表示できるように改修を行っていきます。
+初めて触れる概念が多く登場したと思うので、参考資料を確認しつつ、キャッチアップをしていただければと思います。
+お疲れさまでした！
 
 ## 参考資料
