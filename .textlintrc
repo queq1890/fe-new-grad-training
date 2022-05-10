@@ -1,6 +1,9 @@
 {
   "rules": {
     "preset-ja-technical-writing": true,
-    "ja-technical-writing/no-exclamation-question-mark": false
+    "ja-technical-writing/no-exclamation-question-mark": false,
+    "ja-technical-writing/sentence-length": {
+      "max": 150
+    }
   }
 }

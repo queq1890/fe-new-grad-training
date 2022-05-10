@@ -1,6 +1,6 @@
 # 03. マークアップをしてみよう
 
-本チャプターでは、以下の作業を行っていきます。
+本チャプターでは、以下の作業をします。
 
 - TypeScript を使った 関数・変数 の定義
 - 不要なコード・ファイルの削除
@@ -23,7 +23,7 @@ const foo = 'bar';
 const arr = [1, 3, 5];
 ```
 
-上記は `bar` という string な値を持つ変数 `foo` を定義する例です。`const` を使って定義された変数は、再代入をすることができない読み取り専用の値になります。
+上記は `bar` という string な値を持つ変数 `foo` を定義する例です。`const` を使って定義された変数は、再代入できない読み取り専用の値になります。
 
 ```javascript
 const foo = 'bar';
@@ -41,8 +41,8 @@ let foo = 'bar';
 foo = 'baz';
 ```
 
-`const` / `let` の他にも、`var` というキーワードを使って変数を定義することができますが、`var` には同じ名前の変数を再定義できてしまうという問題があります。
-また、var には巻き上げで呼ばれる、実装者にとって直感的ではない振る舞いが存在しています。そのため、現代の JavaScript を用いた開発では、`var` はほぼ用いられず、`const` / `let` のみで変数定義が行われるのが通例となっています。
+`const` / `let` の他にも、`var` というキーワードを使って変数を定義できますが、`var` には同じ名前の変数を再定義できてしまうという問題があります。
+また、var には巻き上げで呼ばれる、実装者にとって直感的ではない振る舞いが存在しています。そのため、現代の JavaScript を用いた開発では、`var` はほぼ用いられず、`const` / `let` のみで変数を定義するのが通例となっています。
 
 ```javascript
 // 同じ名前の変数が定義できてしまう
@@ -61,7 +61,7 @@ const foo = 'bar';
 let hoge = 'fuga';
 ```
 
-TypeScript では、変数の宣言時に、明示的に変数の型を指定することができます。これは `型注釈 (Type Annotation)` と呼ばれます。再代入可能な変数で、代入可能な値の型を指定したい場合や、配列・オブジェクトのメンバの型を指定したい場合に利用すると良いでしょう。
+TypeScript では、変数の宣言時に、明示的に変数の型を指定できます。これは `型注釈 (Type Annotation)` と呼ばれます。再代入可能な変数で、代入可能な値の型を指定したい場合や、配列・オブジェクトのメンバの型を指定したい場合に利用すると良いでしょう。
 明示的に型注釈をつけない場合は、TypeScript のコンパイラが変数に代入されている値から、変数の型を推測して、自動で型を付与します。この仕組を`型推論(Type Assertion)` といいます。
 
 ```typescript
@@ -99,9 +99,9 @@ const logInArrowFunction = (arg) => {
 };
 ```
 
-どちらの方法も広く利用されていますが、プロジェクトによっては統一性の観点から、`function` のみを使う・`arrow function` のみを使うといった具合に、利用する記法を絞る場合もあります。
+どちらの方法も広く利用されていますが、プロジェクトによっては統一性の観点から、`function` と`arrow function` のどちらかのみを使うといった具合に、利用する記法を絞る場合もあります。
 
-TypeScript を用いる場合でも、上記 2 種の記法を利用することができます。関数の定義時には、関数の引数と、関数の返り値に型注釈をつけることができます。
+TypeScript を用いる場合でも、上記 2 種の記法を利用できます。関数の定義時には、関数の引数と、関数の返り値に型注釈をつけることができます。
 
 ```typescript
 // void は返り値がないという意味
@@ -137,7 +137,7 @@ const element = <div>hello world</div>;
 
 `JSX (JavaScript XML)`は JavaScript 上で HTML のような記法を扱えるようにするための拡張構文です。
 JavaScript には本来存在しない構文なのですが、babel / tsc などのコンパイラが JSX を解釈できるように build の設定を拡張することによって、通常の JavaScript の構文と同様に扱えるようになっています。
-`create-react-app` が JSX の変換の設定を裏側で行っているため、明示的な設定を行わずとも JSX の構文を扱えるようになっています。
+`create-react-app` が JSX の変換の設定を裏側で行っているため、明示的に設定しなくても JSX の構文を扱えるようになっています。
 `JSX` を扱う際、ファイルの拡張子は`.js` ではなく、`.jsx` になります。
 
 TypeScript でこれらの構文を利用する場合は、`TSX` と呼ばれ、ファイルの拡張子は `.tsx` となります。
@@ -219,9 +219,7 @@ $ npm install @mui/material @emotion/react @emotion/styled
 
 `@mui/material` が MUI の本体になりますが、`@emotion/*`という prefix から始まるライブラリを 2 つ同時にインストールしています。これは、MUI が[emotion](https://emotion.sh/docs/introduction) という CSS in JS ライブラリに内部的に依存しているためです。
 
-> Material UI is using emotion as a styling engine by default.
-
-MUI で利用できる色を追加したり、フォントを変更したりといったテーマのカスタマイズを行いたい場合は、別途作業が必要なのですが、今回は default のテーマをそのまま使うので、ここまでで MUI のインストールは完了です。
+MUI で利用できる色を追加したり、フォントを変更したりといったテーマのカスタマイズを行いたい場合は、別途作業が必要なります。今回は default のテーマをそのまま使うので、ここまでで MUI のインストールは完了です。
 ※テーマのカスタマイズが気になる方は、MUI の[theming のドキュメント](https://mui.com/material-ui/customization/theming/) をご覧ください。
 
 ## React component の作成
@@ -251,7 +249,7 @@ const MessageList: FC = () => {
 export default MessageList;
 ```
 
-`FC` は React.js の React Function Component の型です。自分の定義した `MessageList` という arrow function を用いた関数が、JSX を返却する React component であることを明示的にするために、型注釈を用いています。
+`FC` は React.js の React Function Component の型です。自分の定義した `MessageList` という arrow function を用いた関数が、JSX を返却する React component であることを明示的にするため、型注釈を用いています。
 
 ```tsx
 import { FC } from 'react';
@@ -299,7 +297,7 @@ export default App;
 
 ### props 経由で message の配列を MessageList component に渡す
 
-ここまでで、MessageList component を App component 配下で描画することができるようになりました。しかし、MessageList は「こんにちは」「どんもー」といった string をハードコードして表示してしまっています。チャットで表示するメッセージは、このように固定のものではなく、可変でしょうから、外部から MessageList component にメッセージの配列を渡せるようにして、表示するメッセージを注入できるようにしたいです。定義された MessageList component は、arrow function を使って定義された関数なので、通常の関数同様、引数を渡すことができます。React component における引数は `props` と呼ばれ、props 経由で対象の component を描画している親 component から、任意の値を渡すことができます。
+ここまでで、MessageList component を App component 配下で描画できるようになりました。しかし、MessageList は「こんにちは」「どんもー」といった string をハードコードして表示してしまっています。チャットで表示するメッセージは、外部から MessageList component にメッセージの配列を渡せるようにして、表示するメッセージを注入できるようにしたいです。定義された MessageList component は、arrow function を使って定義された関数なので、通常の関数同様、引数を渡すことができます。React component における引数は `props` と呼ばれ、props 経由で対象の component を描画している親 component から、任意の値を渡すことができます。
 
 ```tsx
 // props から値を受け取る
@@ -344,8 +342,8 @@ const MessageList: FC<Props> = (props) => {
 
 ```
 
-props として受け取った `messageList` は配列なので、これを 1 つずつ Box component で囲って表示できれば、props から受け取ったメッセージたちを全て表示することができそうです。
-このような場合には、JavaScript の `array.prototype.map()` を利用することができます。`array.prototype.map()` は、呼び出し元の配列を元に、新しい配列を生成するメソッドで、これを用いて `messageList` の要素が `Box` component に wrap された新しい配列を生成して、これを描画しています。
+props として受け取った `messageList` は配列なので、これを 1 つずつ Box component で囲って表示できれば、props から受け取ったメッセージたちを全て表示できそうです。
+このような場合には、JavaScript の `array.prototype.map()` を利用できます。`array.prototype.map()` は、呼び出し元の配列を元に、新しい配列を生成するメソッドで、これを用いて `messageList` の要素が `Box` component に wrap された新しい配列を生成して、これを描画しています。
 
 ```tsx
 // messageList の要素が `Box` でwrap された新しい配列を生成し、表示する
@@ -356,7 +354,7 @@ props として受け取った `messageList` は配列なので、これを 1 �
 </Stack>
 ```
 
-ここまでで MessageList component が props を受け取るように実装を変更することができました。 `App.tsx` に戻って、 `messageList` props に適当な string の配列を渡してみましょう。
+ここまでで MessageList component が props を受け取るように実装を変更できました。 `App.tsx` に戻って、 `messageList` props に適当な string の配列を渡してみましょう。
 
 ```tsx
 import MessageList from './components/MessageList';
@@ -382,8 +380,8 @@ export default App;
 ## まとめ
 
 今回のチャプターでは、JavaScript / TypeScript における変数・関数の定義の方法に触れつつ、props を受け取ることのできる React component の作成を、MUI で UI を組み立てつつ行いました。
-次のチャプターでは、実際にユーザーがキーボードで入力したテキストをメッセージとして表示できるように改修を行っていきます。
-初めて触れる概念が多く登場したと思うので、参考資料を確認しつつ、キャッチアップをしていただければと思います。
+次のチャプターでは、実際にユーザーがキーボードで入力したテキストをメッセージとして表示できるように改修していきます。
+初めて触れる概念が多く登場したので、参考資料を確認しつつ、キャッチアップをしましょう。
 お疲れさまでした！
 
 ## 参考資料
