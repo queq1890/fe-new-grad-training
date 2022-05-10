@@ -261,7 +261,7 @@ const MessageList: FC = () => {
 ```
 
 `Stack` `Box` は mui から import された React component です。 Stack は一定間隔を開けながら要素を並べるために利用され、Box は HTML でいう `div` タグのように機能する、要素の Wrapper となる基礎的な component です。
-チャット UI の、メッセージが縦に積み重なっていく見た目を作るために、一番外側に Stack を配置して、内側の
+チャット UI の、メッセージが縦に積み重なっていく見た目を作るために、一番外側に Stack を配置して、内側にメッセージを配置してみましょう。
 
 ```tsx
 const MessageList: FC = () => {
@@ -387,3 +387,12 @@ export default App;
 お疲れさまでした！
 
 ## 参考資料
+
+- [必要な情報を保存する — 変数 - ウェブ開発を学ぶ | MDN](https://developer.mozilla.org/ja/docs/Learn/JavaScript/First_steps/Variables)
+- [関数の型 - TypeScript Deep Dive 日本語版](https://typescript-jp.gitbook.io/deep-dive/type-system/functions)
+- [Type Assertion（型アサーション） - TypeScript Deep Dive 日本語版](https://typescript-jp.gitbook.io/deep-dive/type-system/type-assertion)
+- [型推論 - TypeScript Deep Dive 日本語版](https://typescript-jp.gitbook.io/deep-dive/type-system/type-inference)
+- [ジェネリック型 - TypeScript Deep Dive 日本語版](https://typescript-jp.gitbook.io/deep-dive/type-system/generics)
+- [export - JavaScript | MDN](https://developer.mozilla.org/ja/docs/web/javascript/reference/statements/export)
+- [Array.prototype.map() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+- [コンポーネントと props – React](https://ja.reactjs.org/docs/components-and-props.html)
