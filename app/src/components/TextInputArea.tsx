@@ -4,30 +4,30 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 
 type Props = {
-  message: string;
-  onMessageChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  onMessageSubmit: () => void;
+  value: string;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  onSubmit: () => void;
 };
 
-const MessageArea: FC<Props> = (props) => {
+const TextInputArea: FC<Props> = (props) => {
   const onEnterKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
-      props.onMessageSubmit();
+      props.onSubmit();
     }
   };
 
   return (
     <Stack direction="row" spacing={2}>
       <Input
-        value={props.message}
-        onChange={props.onMessageChange}
+        value={props.value}
+        onChange={props.onChange}
         onKeyDown={onEnterKeyDown}
       />
-      <Button variant="contained" onClick={props.onMessageSubmit}>
+      <Button variant="contained" onClick={props.onSubmit}>
         送信する
       </Button>
     </Stack>
   );
 };
 
-export default MessageArea;
+export default TextInputArea;
