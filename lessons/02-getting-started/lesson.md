@@ -127,7 +127,7 @@ $ cat package.json
 npm run start
 ```
 
-![./images/hello-world.png]
+![ハローワールド](./images/hello-world.png)
 
 ## まとめ
 

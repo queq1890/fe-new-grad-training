@@ -121,7 +121,7 @@ export default App;
 
 ここまで実装すると、以下の画像のような状態になっていることが期待されます。
 
-![./images/render-profile.png]
+![profile](./images/render-profile.png)
 
 ## GitHub Users API から data を fetch する
 
@@ -153,7 +153,7 @@ const onSubmit = async () => {
 
 ここまで実装できたら、TextInputArea に自分の GitHub のユーザーネームを入力し、「送信する」ボタンを押してみましょう。上手く実装できていれば、ブラウザの開発者ツール上に、API から取得したデータが出力されているはずです。
 
-![./images/console.png]
+![console](./images/console.png)
 
 ### fetch した data を state として保持する
 
@@ -239,7 +239,7 @@ export default Profile;
 
 以下の画像のように、profile の fetch 後に以下の画像のようにカードが表示されれば、条件付きの render が実装できていることになります。
 
-![conditinal-render.png]
+![conditional-render](conditinal-render.png)
 
 ※React.js には他にも条件付きで render する内容を切り替えるテクニックが存在しています。気になる方は、[公式ドキュメント](https://ja.reactjs.org/docs/conditional-rendering.html) をご覧ください。
 
