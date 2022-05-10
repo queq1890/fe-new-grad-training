@@ -1,0 +1,23 @@
+{
+  "name": "fe-new-grad-training",
+  "version": "1.0.0",
+  "description": "React.js + TypeScript tutorial",
+  "scripts": {
+    "lint": "textlint ./**/*.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/queq1890/fe-new-grad-training.git"
+  },
+  "keywords": [],
+  "author": "Yuji Matsumoto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/queq1890/fe-new-grad-training/issues"
+  },
+  "homepage": "https://github.com/queq1890/fe-new-grad-training#readme",
+  "dependencies": {
+    "textlint": "^12.1.1",
+    "textlint-rule-preset-ja-technical-writing": "^7.0.0"
+  }
+}
