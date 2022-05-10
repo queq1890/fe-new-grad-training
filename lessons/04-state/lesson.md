@@ -1,6 +1,6 @@
 # 04. React component に状態を持たせてみよう
 
-本チャプターでは、以下の作業を行っていきます。
+本チャプターでは、以下の作業をします。
 
 - `useState` hook を使った状態管理
 - React の SyntheticEvent を使った、ユーザーの操作に応じた振る舞いの実装
@@ -36,13 +36,13 @@ function Example() {
 
 ## React の SyntheticEvent
 
-JavaScript には [Event](https://developer.mozilla.org/en-US/docs/Web/API/Event) という考え方が存在します。「ユーザーがある要素をクリックした時」「ユーザーがある要素にマウスをホバーした時」「ユーザーがキーボードを押した時」「ユーザーが文字を入力した時」など、ユーザーが行った操作に応じて、何かロジックを実装するための機構です。React.js では、「ある component に対して event が発生した時」という状態を分かりやすく扱うため、[SyntheticEvent](https://ja.reactjs.org/docs/events.html) という機構が採用されています。簡単に説明すると、`on<イベント名>` のような prop に関数を渡すと、該当するイベントがその component に対して発生した際に、渡した関数を実行してくれる、という仕組みです。
+JavaScript には [Event](https://developer.mozilla.org/en-US/docs/Web/API/Event) という考え方が存在します。「ユーザーがある要素をクリックした時」「ユーザーがある要素にマウスをホバーした時」「ユーザーがキーボードを押した時」「ユーザーが文字を入力した時」など、ユーザーが行った操作に応じて、何かロジックを実装するための機構です。React.js では、「ある component に対して event が発生した時」という状態を分かりやすく扱うため、[SyntheticEvent](https://ja.reactjs.org/docs/events.html) という機構が採用されています。簡単に説明すると、`on<イベント名>` のような prop に関数を渡すと、該当するイベントがその component に対して発生した際に、渡した関数を実行してくれる仕組みです。
 
 ```jsx
 <button onClick={() => setCount(count + 1)}>Click me</button>
 ```
 
-先程の例だと、button に `onClick` というイベントが設定されていました。これは「この component が click された時」に発生するイベントなので、ユーザーがボタンをクリックすると、渡されている `() => setCount(count + 1)` が実行され、 `count` の値が増える、という仕組みになっていました。
+先程の例だと、button に `onClick` というイベントが設定されていました。これは「この component が click された時」に発生するイベントなので、ユーザーがボタンをクリックすると、渡されている `() => setCount(count + 1)` が実行され、 `count` の値が増える仕組みになっていました。
 
 ## ユーザーがメッセージを入力できる Component の作成
 
@@ -71,7 +71,7 @@ const MessageArea: FC<Props> = (props) => {
 export default MessageArea;
 ```
 
-props から、 Input に入力された値である`message` と、 `message` を更新するための関数である`onMessageChange` を受け取っています。`message` は Input の値である `value`に割り当てられ、 `onMessageChange` は、`onChange` という、対象の component に何か値の変化があった時に発火する SyntheticEvent に割り当てられています。 `onChange` は `ChangeEvent` という型の event を引数に取り、今回 event が発火する Input component が内部的には HTML の input 要素を使っているため、「input 要素で発火する ChangeEvent である」ということを型で表現するため、 `ChangeEvent<HTMLInputELement>` のような、generics を交えた記載を行っています。
+props から、 Input に入力された値である`message` と、 `message` を更新するための関数である`onMessageChange` を受け取っています。`message` は Input の値である `value`に割り当てられ、 `onMessageChange` は、`onChange` (対象の component の value が変化した際発火する SyntheticEvent) に割り当てられています。`onChange` は `ChangeEvent` という型の event を引数に取ります。今回 event が発火する Input component は、内部的には HTML の input 要素を使っているため、「input 要素で発火する ChangeEvent である」ということを型で表現する目的で、 `ChangeEvent<HTMLInputELement>` のような、generics を使った型を指定しています。
 
 また、ロジックはまだ実装しませんが、ユーザーが入力したメッセージをメッセージ一覧に追加するための、Button component も render しています。
 
@@ -103,7 +103,7 @@ function App() {
 export default App;
 ```
 
-`useState` を使って、`message` という state と、message を更新するための関数である、`setMessage` を定義しています。また、`event: ChangeEvent<HTMLInputElement>` を引数にとる関数`onMessageChange`を定義し、MessageArea の`onMessageChange` prop に渡しています。onMessageChange 内で、`event.target.value` を `setMessage()` に渡している理由が気になる方は、event.target.value の値を console.log() で確認したり、 `setMessage(event.target.value)` の部分を削除した場合に、どのような挙動になるかを確認してみると良いでしょう。
+`useState` を使って、`message` という state と、message を更新するための関数である、`setMessage` を定義しています。また、`event: ChangeEvent<HTMLInputElement>` を引数にとる関数`onMessageChange`を定義し、MessageArea の`onMessageChange` prop に渡しています。onMessageChange 内で、`event.target.value` を `setMessage()` に渡している理由が気になる方は、event.target.value の値を console.log() で確認したり、 `setMessage(event.target.value)` の部分を削除するとどのような挙動になるかを確認してみると良いでしょう。
 
 ```tsx
 const onMessageChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -178,7 +178,7 @@ function App() {
 export default App;
 ```
 
-`messageList` を`useState` で定義する際に、`useState<string[]>` のような形で、generics を使って `messageList` の型を明示的に宣言しています。これは、`messageList` が `[]` という空の配列で初期化されているため、TypeScript は「messageList が配列であることは分かるが、中身の要素の型が分からない」状態になってしまい、`setMessageList(['foo'])` のように、string の要素を持った配列を使ってのちのち state を更新しようとしても、型エラーになってしまうためです。初期化の時点で明示的に `string[]` 型の state であることを示すことによって、`setMessageList` 実行時の型エラーを防いでいます。
+`messageList` を`useState` で定義する際に、`useState<string[]>` のような形で、generics を使って `messageList` の型を明示的に宣言しています。`messageList` が `[]` という空の配列で初期化されているため、TypeScript のコンパイラは「messageList が配列であることは分かるが、中身の要素の型が分からない」状態になってしまいます。そのため、`setMessageList(['foo'])` のように、string の要素を持った配列を使ってのちのち state を更新しようとしても、型エラーになってしまうためです。初期化の時点で明示的に `string[]` 型の state であることを示すことによって、`setMessageList` 実行時の型エラーを防いでいます。
 
 ```tsx
 // messageList はstring の配列であると宣言
@@ -193,8 +193,8 @@ const [messageList, setMessageList] = useState([]);
 - `message` の値を、`messageList` 配列の最後尾に追加する
 - `message` の値を `''`にすることで、入力をクリアする
 
-`useState` の、state 更新関数は、`setFoo(新しい値)` のような使い方の他に、`setFoo(現在の値 => 新しい値)` という使い方をすることもできます。現在の state の値を参照しながら、新しい state を設定したい時に役立ちます。
-今回は、 現在の`messageList` の配列に、`message` を加えた新しい配列を作って `messageList` の値を更新したい、というケースなので、`setFoo(現在の値 => 新しい値)` のパターンを利用しています。
+`useState` の、state 更新関数は、`setFoo(新しい値)` のような使い方の他に、`setFoo(現在の値 => 新しい値)` という使い方をできます。現在の state の値を参照しながら、新しい state を設定したい時に役立ちます。
+今回は、 現在の`messageList` の配列に`message` を加えた新しい配列を作って `messageList` の値を更新したい、というケースなので、`setFoo(現在の値 => 新しい値)` のパターンを利用しています。
 
 さて、setMessageList 内で、新たに返却される state を記述している箇所を見ると、`[...currentMessageList, message]` という記述がされています。　`...currentMessageList` の部分は、[Spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) と呼ばれ、配列・オブジェクトの中身を全て展開するのに利用されます。この構文は、ある配列・オブジェクトの中身を全てコピーした新しい配列を作成したい時に役に立ちます。
 
@@ -206,7 +206,7 @@ const copy = [...arr];
 // copy の中身は['a', 'b']
 ```
 
-よって、`[...currentMessageList, message]` は、`currentMessageList` の中身を全てコピーしつつ、配列の末尾に `message` という要素を追加した新しい配列を作る、という意味になります。
+`[...currentMessageList, message]` は、`currentMessageList` の中身を全てコピーしつつ、配列の末尾に `message` という要素を追加した新しい配列を作る、という意味になります。
 
 ```tsx
 setMessageList((currentMessageList) => [...currentMessageList, message]);
@@ -225,7 +225,7 @@ MessageArea component の実装を改修して、Enter キーを押した時に�
 
 ## まとめ
 
-今回のチャプターでは React.js の hooks と SyntheticEvent を使って、MessageArea component を実装しました。次のチャプターでは、外部の API から data を fetch して、React.js アプリケーション上に表示する実装を行います。
+今回のチャプターでは React.js の hooks と SyntheticEvent を使って、MessageArea component を実装しました。次のチャプターでは、外部の API から data を fetch して、React.js アプリケーション上に表示する実装をします。
 お疲れさまでした！☕
 
 ## 参考資料

@@ -23,7 +23,7 @@
   - ユーザーが存在しない場合、ユーザーが見つからなかった旨をメッセージとして表示する
 
 ユーザーが GitHub のユーザーネームを入力する部分は、既に実装済みの `MessageArea` component を使いまわすことができそうです。
-ただ、`message` 以外の string value も受け取れることが分かる命名に変更したいので、ファイルの名前と、component の名前を、 `TextInputArea` に変更します。また、`props.message` についても、`props.value` に rename しましょう。
+ただ、`message` 以外の string value も受け取れることが分かる命名に変更したいので、ファイルの名前と component の名前を、 `TextInputArea` に変更します。また、`props.message` についても、`props.value` に rename しましょう。
 
 ```tsx
 import { ChangeEvent, FC, KeyboardEvent } from 'react';

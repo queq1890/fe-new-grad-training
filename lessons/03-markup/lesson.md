@@ -62,7 +62,7 @@ let hoge = 'fuga';
 ```
 
 TypeScript では、変数の宣言時に、明示的に変数の型を指定できます。これは `型注釈 (Type Annotation)` と呼ばれます。再代入可能な変数で、代入可能な値の型を指定したい場合や、配列・オブジェクトのメンバの型を指定したい場合に利用すると良いでしょう。
-明示的に型注釈をつけない場合は、TypeScript のコンパイラが変数に代入されている値から、変数の型を推測して、自動で型を付与します。この仕組を`型推論(Type Assertion)` といいます。
+明示的に型注釈をつけない場合は、TypeScript のコンパイラが変数に代入されている値から、変数の型を推測して、自動で型を付与します。この仕組みを`型推論(Type Assertion)` といいます。
 
 ```typescript
 // hoge はstring 型であると明示的に指定
@@ -343,7 +343,7 @@ const MessageList: FC<Props> = (props) => {
 ```
 
 props として受け取った `messageList` は配列なので、これを 1 つずつ Box component で囲って表示できれば、props から受け取ったメッセージたちを全て表示できそうです。
-このような場合には、JavaScript の `array.prototype.map()` を利用できます。`array.prototype.map()` は、呼び出し元の配列を元に、新しい配列を生成するメソッドで、これを用いて `messageList` の要素が `Box` component に wrap された新しい配列を生成して、これを描画しています。
+このような場合には、JavaScript の `array.prototype.map()` を利用できます。`array.prototype.map()` は、呼び出し元の配列を元に、新しい配列を生成するメソッドで、これを用いて `messageList` の要素が `Box` component に wrap された新しい配列を生成しています。
 
 ```tsx
 // messageList の要素が `Box` でwrap された新しい配列を生成し、表示する
