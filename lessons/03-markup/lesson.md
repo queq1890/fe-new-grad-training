@@ -394,3 +394,5 @@ export default App;
 - [export - JavaScript | MDN](https://developer.mozilla.org/ja/docs/web/javascript/reference/statements/export)
 - [Array.prototype.map() - JavaScript | MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 - [コンポーネントと props – React](https://ja.reactjs.org/docs/components-and-props.html)
+
+[<< 前のチャプター](../02-getting-started/lesson.md) | [次のチャプター >>](../04-state/lesson.md)
