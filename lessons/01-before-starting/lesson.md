@@ -6,3 +6,5 @@
 https://fe-new-grad-training-slide.vercel.app/
 
 ※このスライドは 2022 年 5 月に実施した Wen フロントエンド研修で使用されたスライドになります。
+
+[次のチャプター >>](../02-getting-started/lesson.md)

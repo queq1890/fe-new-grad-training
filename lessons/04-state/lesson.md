@@ -233,3 +233,5 @@ MessageArea component の実装を改修して、Enter キーを押した時に�
 - [フックの導入 - React](https://ja.reactjs.org/docs/hooks-intro.html)
 - [合成イベント - React](https://ja.reactjs.org/docs/events.html)
 - [スプレッド構文](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+
+[<< 前のチャプター](../03-markup/lesson.md) | [次のチャプター >>](../05-fetch-data//lesson.md)
