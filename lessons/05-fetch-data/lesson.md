@@ -262,3 +262,5 @@ export default Profile;
 - [非同期処理:コールバック/Promise/Async Function · JavaScript Primer #jsprimer](https://jsprimer.net/basic/async/#async-handling)
 - [型の互換性 - TypeScript Deep Dive 日本語版](https://typescript-jp.gitbook.io/deep-dive/type-system/type-compatibility)
 - [条件付きレンダー - React](https://ja.reactjs.org/docs/conditional-rendering.html)
+
+[<< 前のチャプター](../04-state/lesson.md)
