@@ -19,3 +19,5 @@ https://create-react-app.dev/docs/setting-up-your-editor/#formatting-code-automa
 ## デプロイをしてみる
 
 作成したアプリケーションをデプロイしてみましょう。無料の hosting サービスとしては、[Netlify](https://www.netlify.com/)・[Vercel](https://vercel.com/) が広く利用されています。
+
+[<< 前のチャプター](../../lessons/04-state/lesson.md) | [付録 2 >>](../02-self-taught-resources/appendix.md)
