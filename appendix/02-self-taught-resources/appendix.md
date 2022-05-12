@@ -4,11 +4,11 @@
 
 ## Web サイト
 
-- [TypeScript Deep Dive](https://typescript-jp.gitbook.io/deep-dive/)
+- [JavaScript Primer](https://jsprimer.net/)
 
-  - コードサンプル多めの、TypeScript + モダン JavaScript の解説ドキュメント
-  - TypeScript/JavaScript の文法は、検索しにくいものもあるので、一通り目を通しておくとよい
-    - (`??` `foo?.bar` `{a, b, ...rest}` など)
+  - JavaScript の文法・機能をいちから学べる Web 書籍
+  - 著者の azu さんはhttps://jser.info/ という JavaScript の最新情報を紹介するブログを運用されている方
+  - 商業版もある https://www.amazon.co.jp/dp/4048930737/
 
 - [ウェブ開発を学ぶ - MDN](https://developer.mozilla.org/ja/docs/Learn)
 
@@ -20,31 +20,32 @@
   - Google が運営している、良いパフォーマンスの Web サービスを開発するための tips を紹介しているサイト
   - `Learn` に CSS/React などのチュートリアルが置いてある
 
-- [Frontend Developer Roadmap](https://roadmap.sh/frontend)
-  - フロントエンドエンジニアが学習するべき単元をリストアップしている
-  - 何を勉強するべきかわからなくなったら、ロードマップを見て、学習する項目を決めると良い
+- [TypeScript Deep Dive](https://typescript-jp.gitbook.io/deep-dive/)
 
-## チュートリアル・Web 書籍
-
-- [React.js 公式チュートリアル](https://ja.reactjs.org/tutorial/tutorial.html)
-
-  - 本チュートリアルでは拾いきれなかった React.js の各概念について詳細に説明されているので、React.js の学習を継続する場合はやったほうが良い
-
-- [JavaScript Primer](https://jsprimer.net/)
-
-  - JavaScript の文法・機能をいちから学べる Web 書籍
-  - 著者の azu さんはhttps://jser.info/ という JavaScript の最新情報を紹介するブログを運用されている方
-  - 書籍版もあります https://www.amazon.co.jp/dp/4048930737/
-
-- [チュートリアル - MDN](https://developer.mozilla.org/ja/docs/Web/Tutorials)
-
-  - MDN が公開しているチュートリアルをまとめているページ
-  - HTML/CSS のチュートリアルが手厚くおすすめ
+  - コードサンプル多めの、TypeScript + モダン JavaScript の解説ドキュメント
+  - TypeScript/JavaScript の文法は、検索しにくいものもあるので、一通り目を通しておくとよい
+    - (`??` `foo?.bar` `{a, b, ...rest}` など)
 
 - [The TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
 
   - TypeScript 公式の TypeScript ハンドブック
   - 基本的な文法を一通りさらえる
+
+- [Frontend Developer Roadmap](https://roadmap.sh/frontend)
+
+  - フロントエンドエンジニアが学習するべき単元をリストアップしている
+  - 何を勉強するべきかわからなくなったら、ロードマップを見て、学習する項目を決めると良い
+
+## チュートリアル
+
+- [React.js 公式チュートリアル](https://ja.reactjs.org/tutorial/tutorial.html)
+
+  - 本チュートリアルでは拾いきれなかった React.js の各概念について詳細に説明されているので、React.js の学習を継続する場合はやったほうが良い
+
+- [チュートリアル - MDN](https://developer.mozilla.org/ja/docs/Web/Tutorials)
+
+  - MDN が公開しているチュートリアルをまとめているページ
+  - HTML/CSS のチュートリアルが手厚くおすすめ
 
 - [最新版で学ぶ webpack 5 入門 JavaScript のモジュールバンドラ](https://ics.media/entry/12140/)
 
