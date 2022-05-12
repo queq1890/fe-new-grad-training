@@ -40,7 +40,8 @@
 
 - [React.js 公式チュートリアル](https://ja.reactjs.org/tutorial/tutorial.html)
 
-  - 本チュートリアルでは拾いきれなかった React.js の各概念について詳細に説明されているので、React.js の学習を継続する場合はやったほうが良い
+  - 本チュートリアルでは拾いきれなかった React.js の各概念について詳細に説明されている
+  - React.js の学習を継続する場合は一度やってみるのがおすすめ
 
 - [チュートリアル - MDN](https://developer.mozilla.org/ja/docs/Web/Tutorials)
 
