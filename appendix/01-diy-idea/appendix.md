@@ -1,6 +1,6 @@
 # Appendix-01. アプリケーション改善のアイディア
 
-チュートリアルで作成したアプリケーションは、とりあえず React.js と TypeScript の素振りを行うためのもので、完成したものは「アプリケーション」と呼ぶには色々欠けている部分があります。本稿では、追加で学習を行いたい方のために、作成した React.js アプリケーションに実施できそうな改善のアイディアを羅列しておきます。
+チュートリアルで作成したアプリケーションは、とりあえず React.js と TypeScript の素振りを行うためのもので、完成したものは「アプリケーション」と呼ぶには色々欠けている部分があります。本稿では、追加で学習したい方のために、作成した React.js アプリケーションに実施できそうな改善のアイディアを羅列しておきます。
 
 ## ルーティング
 
@@ -19,3 +19,5 @@ https://create-react-app.dev/docs/setting-up-your-editor/#formatting-code-automa
 ## デプロイをしてみる
 
 作成したアプリケーションをデプロイしてみましょう。無料の hosting サービスとしては、[Netlify](https://www.netlify.com/)・[Vercel](https://vercel.com/) が広く利用されています。
+
+[<< 前のチャプター](../../lessons/04-state/lesson.md) | [付録 2 >>](../02-self-taught-resources/appendix.md)

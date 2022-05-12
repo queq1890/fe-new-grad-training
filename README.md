@@ -52,6 +52,18 @@ React.js + TypeScript に初めて触れる方向けのチュートリアルリ�
 - Profile component の作成
 - GitHub Users API から data を fetch する
 
+## 付録(Appendix)
+
+本チュートリアル完了後の学習のヒントなどを記載しています。
+
+### [Appendix-01. アプリケーション改善のアイディア](./appendix/01-diy-idea/appendix.md)
+
+- 本チュートリアルで作成した React.js アプリケーションに、追加で行えそうな改修をリストアップ
+
+### [Appendix-02. Web フロントエンドの学習用リソース](./appendix/02-self-taught-resources/appendix.md)
+
+- 今後の学習に使えそうな Web サイト・チュートリアル・書籍を紹介
+
 ## 進め方
 
 - `lessons/**/lesson.md` をチャプター順に読んでください。

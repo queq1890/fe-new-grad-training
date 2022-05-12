@@ -263,4 +263,4 @@ export default Profile;
 - [型の互換性 - TypeScript Deep Dive 日本語版](https://typescript-jp.gitbook.io/deep-dive/type-system/type-compatibility)
 - [条件付きレンダー - React](https://ja.reactjs.org/docs/conditional-rendering.html)
 
-[<< 前のチャプター](../04-state/lesson.md)
+[<< 前のチャプター](../04-state/lesson.md) | [付録 1 >>](../../appendix/01-diy-idea/appendix.md)
