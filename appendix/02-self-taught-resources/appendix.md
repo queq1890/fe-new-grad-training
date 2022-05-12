@@ -43,6 +43,11 @@
   - 本チュートリアルでは拾いきれなかった React.js の各概念について詳細に説明されている
   - React.js の学習を継続する場合は一度やってみるのがおすすめ
 
+- [Create a Next.js App | Learn Next.js](https://nextjs.org/learn/basics/create-nextjs-app)
+
+  - Next.js 公式のチュートリアル
+  - (ある程度 React.js に慣れてからの方が、Next.js が何を解決してくれているのかは実感しやすいかもしれません。)
+
 - [チュートリアル - MDN](https://developer.mozilla.org/ja/docs/Web/Tutorials)
 
   - MDN が公開しているチュートリアルをまとめているページ
