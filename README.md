@@ -22,7 +22,7 @@ React.js + TypeScript に初めて触れる方向けのチュートリアルリ�
 
 5 つのチャプターで構成されています。
 
-### [01. 現代 Web フロントエンドの特徴](./lessons/01-background/lesson.md)
+### [01. 現代 Web フロントエンドの特徴](./lessons/01-before-starting/lesson.md)
 
 - 最近の Web フロントエンド(2022/05 時点)での Web フロントエンドについて、どのような技術が、どのような背景で採用されているかの解説
 
