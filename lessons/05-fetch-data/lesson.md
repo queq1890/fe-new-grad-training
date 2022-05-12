@@ -257,7 +257,7 @@ export default Profile;
 
 改めて、お疲れさまでした！
 
-##　参考資料
+## 参考資料
 
 - [非同期処理:コールバック/Promise/Async Function · JavaScript Primer #jsprimer](https://jsprimer.net/basic/async/#async-handling)
 - [型の互換性 - TypeScript Deep Dive 日本語版](https://typescript-jp.gitbook.io/deep-dive/type-system/type-compatibility)
