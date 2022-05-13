@@ -70,6 +70,11 @@
   - CSS の設計手法を実際のコード付きで解説している本
   - ボリュームがすごい(728p)
 
+- [HTML 解体新書-仕様から紐解く本格入門](https://www.amazon.co.jp/-/en/%E5%A4%AA%E7%94%B0-%E8%89%AF%E5%85%B8/dp/4862465277)
+
+  - HTML について、HTML の仕様に触れながら解説している本
+    - マークアップ・HTML の要素、アクセシビリティなど
+
 - [プロを目指す人のための TypeScript 入門](https://www.amazon.co.jp/o/ASIN/4297127474/gihyojp-22)
 
   - TypeScript の基礎知識を学べる本
