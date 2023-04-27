@@ -60,9 +60,9 @@
 
 ## 書籍
 
-- [りあクト！ TypeScript で始めるつらくない React 開発 第 3.1 版](https://oukayuka.booth.pm/items/2368045)
+- [りあクト！ TypeScript で始めるつらくない React 開発](https://oukayuka.booth.pm/items/2368045)
 
-  - 対話形式で進む React.js + TypeScript のハンズオン本
+  - 対話形式で進む React.js + TypeScript のチュートリアル本
   - 全 3 部構成で、やりきれば React.js + TypeScript のプロジェクトに問題なく参加できるレベルまで知識がつく
 
 - [CSS 設計完全ガイド](https://www.amazon.co.jp/-/en/%E5%8D%8A%E7%94%B0-%E6%83%87%E5%BF%97/dp/429711173X/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=)
@@ -80,5 +80,10 @@
   - TypeScript の基礎知識を学べる本
   - JavaScript をあまり書いたことのない方にもおすすめ
   - (TypeScript のエンジニアには、ゆるくてもいいから型をつけようという型付け頑張らない派と、堅牢に型をつけて TypeScript の恩恵をフルに受けようという型付け頑張る派がいます。この書籍の著者の方は後者の派閥です。)
+
+- [Jest ではじめるテスト入門](https://peaks.cc/books/testing_with_jest)
+
+- Jest を使った JavaScript / TypeScript のテスト手法について解説
+- 2023 年 3 月に発売されたので内容が deprecated でない
 
 [<< 付録 1](../01-diy-idea/appendix.md)
