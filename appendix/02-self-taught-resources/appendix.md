@@ -38,7 +38,7 @@
 
 ## チュートリアル
 
-- [React.js 公式チュートリアル](https://ja.reactjs.org/tutorial/tutorial.html)
+- [React.js 公式チュートリアル](https://react.dev/learn/tutorial-tic-tac-toe)
 
   - 本チュートリアルでは拾いきれなかった React.js の各概念について詳細に説明されている
   - React.js の学習を継続する場合は一度やってみるのがおすすめ
