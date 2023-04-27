@@ -82,8 +82,7 @@
   - (TypeScript のエンジニアには、ゆるくてもいいから型をつけようという型付け頑張らない派と、堅牢に型をつけて TypeScript の恩恵をフルに受けようという型付け頑張る派がいます。この書籍の著者の方は後者の派閥です。)
 
 - [Jest ではじめるテスト入門](https://peaks.cc/books/testing_with_jest)
-
-- Jest を使った JavaScript / TypeScript のテスト手法について解説
-- 2023 年 3 月に発売されたので内容が deprecated でない
+  - Jest を使った JavaScript / TypeScript のテスト手法について解説
+  - 2023 年 3 月に発売されたので内容が deprecated でない
 
 [<< 付録 1](../01-diy-idea/appendix.md)
